@@ -5,12 +5,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
+    <OutputPath>$(exapiPackage)\</OutputPath>
   </PropertyGroup>
   <ItemGroup Condition="'$(SolutionName)' == 'ExileApi'">
-    <ProjectReference Include="..\..\GameOffsets\GameOffsets.csproj" />
-    <ProjectReference Include="..\Core\Core.csproj" />
-    <Reference Include="Kalon">
-    </Reference>
+    <ProjectReference Include="..\..\..\Core\Core.csproj" />
   </ItemGroup>
   <ItemGroup Condition="'$(SolutionName)' != 'ExileApi'">
     <Reference Include="ExileCore">
