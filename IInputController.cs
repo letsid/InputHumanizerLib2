@@ -8,7 +8,7 @@ namespace InputHumanizer.Input
 {
     public interface IInputController : IDisposable
     {
-        bool KeyDown(Keys key);
+        SyncTask<bool> KeyDown(Keys key, CancellationToken cancellationToken = default);
         SyncTask<bool> KeyUp(Keys key, bool releaseImmediately = false, CancellationToken cancellationToken = default);
         SyncTask<bool> Click(CancellationToken cancellationToken = default);
         SyncTask<bool> Click(MouseButtons button, CancellationToken cancellationToken = default);
